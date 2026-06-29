@@ -64,7 +64,7 @@ These are files that provide custom instructions to Copilot
 * Touch on folder structure mess
 - Instruction Files
 	- [Documentation](https://code.visualstudio.com/docs/agent-customization/custom-instructions)
-	- AGENTS.md
+	- [[AGENTS.md]]
 	- Scoped instructions
 		- Documentation
 		- Path: `.github/instructions`
