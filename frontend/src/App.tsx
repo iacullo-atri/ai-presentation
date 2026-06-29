@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from 'react'
+import { useEffect, useState } from 'react'
 import { createTodo, listTodos, updateTodo } from './api'
 import type { Todo } from './types'
 
@@ -15,11 +15,6 @@ function App() {
       .catch(() => setError('Could not load tasks. Is the backend running?'))
       .finally(() => setLoading(false))
   }, [])
-
-  const remaining = useMemo(
-    () => todos.filter((t) => !t.completed).length,
-    [todos],
-  )
 
   async function handleAdd() {
     const trimmed = title.trim()
@@ -59,9 +54,6 @@ function App() {
       <div className="w-full max-w-lg">
         <header className="mb-8 text-center">
           <h1 className="text-4xl font-bold tracking-tight text-white">Tasks</h1>
-          <p className="mt-2 text-sm text-slate-400">
-            {remaining} {remaining === 1 ? 'task' : 'tasks'} remaining
-          </p>
         </header>
 
         <div className="rounded-2xl bg-white shadow-2xl shadow-black/30 ring-1 ring-black/5 overflow-hidden">
