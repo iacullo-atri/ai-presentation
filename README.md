@@ -5,7 +5,7 @@ A small to-do application:
 - **Backend** — Django + Django REST Framework (SQLite), exposing a REST API at `/api/todos/`.
 - **Frontend** — Vite + React + TypeScript, styled with Tailwind CSS, in [`frontend/`](frontend/).
 
-Features: list tasks, add a task, check a task as done (and uncheck), and delete a task.
+Features: list tasks, add a task, check a task as done (and uncheck).
 
 ```
 ai-presentation/
@@ -21,37 +21,19 @@ ai-presentation/
         └── types.ts
 ```
 
-## Prerequisites
-
-- Python 3.11+
-- Node 20+
-
 ## Running the app
 
 You need **two terminals** — one for the API, one for the UI.
 
-### 1. Backend (port 8000)
-
-```bash
-cd backend
-python3 -m venv venv            # first time only
-source venv/bin/activate
-pip install -r requirements.txt # first time only
-python manage.py migrate        # first time only
-python manage.py runserver
-```
-
-The API is now at http://127.0.0.1:8000/api/todos/ (DRF's browsable API works there too).
-
-### 2. Frontend (port 5173)
+### 2. Frontend
 
 ```bash
 cd frontend
-npm install                     # first time only
+npm install
 npm run dev
 ```
 
-Open **http://localhost:5173**. The Vite dev server proxies `/api/*` to Django
+The Vite dev server proxies `/api/*` to Django
 (configured in [frontend/vite.config.ts](frontend/vite.config.ts)), so there is
 nothing else to configure.
 
