@@ -1,4 +1,4 @@
-	# GitHub Copilot Presentation
+# GitHub Copilot Presentation
 
 
 ## Inline Completions

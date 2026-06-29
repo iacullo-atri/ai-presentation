@@ -15,7 +15,7 @@
               "state": {
                 "file": "Copilot Presentation.md",
                 "mode": "source",
-                "source": false
+                "source": true
               },
               "icon": "lucide-file",
               "title": "Copilot Presentation"
@@ -78,8 +78,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "a1cbb8ab0a6482d2",
@@ -186,18 +185,18 @@
   },
   "active": "2f4cb99491eccd5a",
   "lastOpenFiles": [
-    "Instructions/AGENTS.md.md",
-    "Prompts/Original Prompt.md",
-    "Skills/Frontend.md",
-    "Copilot Presentation.md",
-    "Instructions",
-    "Hotkeys.md",
-    "Prompts/Tagging System.md",
-    "Prompts/Search Bar.md",
     "Slash Commands/delete-migrations.prompt.md.md",
     "Slash Commands",
+    "Skills/Frontend.md",
     "Skills",
+    "Prompts/Tagging System.md",
+    "Prompts/Search Bar.md",
+    "Prompts/Original Prompt.md",
     "Prompts",
+    "Instructions/AGENTS.md.md",
+    "Instructions",
+    "Hotkeys.md",
+    "Copilot Presentation.md",
     "Welcome.md"
   ]
 }
