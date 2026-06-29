@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useState } from 'react'
+import { createTodo, listTodos, updateTodo } from './api'
 import type { Todo } from './types'
-import { createTodo, deleteTodo, listTodos, updateTodo } from './api'
 
 function App() {
   const [todos, setTodos] = useState<Todo[]>([])
@@ -51,17 +51,6 @@ function App() {
           t.id === todo.id ? { ...t, completed: todo.completed } : t,
         ),
       )
-    }
-  }
-
-  async function remove(todo: Todo) {
-    const previous = todos
-    setTodos((prev) => prev.filter((t) => t.id !== todo.id))
-    try {
-      await deleteTodo(todo.id)
-    } catch {
-      setError('Could not delete task.')
-      setTodos(previous)
     }
   }
 
@@ -145,20 +134,6 @@ function App() {
                   >
                     {todo.title}
                   </span>
-
-                  <button
-                    onClick={() => remove(todo)}
-                    aria-label="Delete task"
-                    className="shrink-0 rounded-md p-1.5 text-slate-300 opacity-0 transition hover:bg-rose-50 hover:text-rose-500 group-hover:opacity-100 focus:opacity-100"
-                  >
-                    <svg viewBox="0 0 20 20" fill="currentColor" className="h-5 w-5">
-                      <path
-                        fillRule="evenodd"
-                        d="M8.75 1.75a1 1 0 00-.95.68L7.3 4H4a1 1 0 100 2h.3l.78 9.4A2 2 0 007.07 17h5.86a2 2 0 001.99-1.6L15.7 6H16a1 1 0 100-2h-3.3l-.5-1.57a1 1 0 00-.95-.68h-2.5zM9 8a1 1 0 012 0v5a1 1 0 11-2 0V8z"
-                        clipRule="evenodd"
-                      />
-                    </svg>
-                  </button>
                 </li>
               ))
             )}

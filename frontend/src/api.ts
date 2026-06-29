@@ -33,9 +33,3 @@ export function updateTodo(
     body: JSON.stringify(patch),
   }).then((r) => handle<Todo>(r))
 }
-
-export function deleteTodo(id: number): Promise<void> {
-  return fetch(`${BASE}${id}/`, { method: 'DELETE' }).then((r) =>
-    handle<void>(r),
-  )
-}
