@@ -46,11 +46,11 @@
 		- *Example: Remove footer*
 
 ### Token Usage and Context Window
+- Explain allowance (subject to change)
 - Explain tokens
 	- One token is roughly equal to 4 characters
 	- Spaces, punctuation, suffixes and prefixes (-ing)
 	- Tokenization algorithm is model-specific
-- Explain allowance (subject to change)
 - [Model Pricing](https://docs.github.com/en/copilot/reference/copilot-billing/models-and-pricing)
 - Show Figma context example
 	- Input token usage grows exponentially
@@ -62,19 +62,18 @@
 These are files that provide custom instructions to Copilot
 
 * Touch on folder structure mess
-- Instruction Files
-	- [Documentation](https://code.visualstudio.com/docs/agent-customization/custom-instructions)
-	- [[AGENTS.md]]
+- Instruction Files - [Documentation](https://code.visualstudio.com/docs/agent-customization/custom-instructions)
+	- Explain
+	- Example: [[AGENTS.md]]
 	- Scoped instructions
 		- Documentation
 		- Path: `.github/instructions`
 		- Properties: `description`, `applyTo`
-- Skills
+- Skills - [Open specification](https://agentskills.io) - [Documentation](https://code.visualstudio.com/docs/agent-customization/agent-skills)
 	- Instructions that are used as-needed
-	- [Open specification](https://agentskills.io)
-	- [Documentation](https://code.visualstudio.com/docs/agent-customization/agent-skills)
 	- Path: `.agents/skills/<skill-name>/SKILL.md`
-	- *Example: Add a delete button before and after adding a frontend skill**
+	- [[Frontend]]
+	- *Example: Add a delete button**
 - Tools
 	- Explain
 	- Show tools list
@@ -94,3 +93,7 @@ These are files that provide custom instructions to Copilot
 - Planning:
 	- *Example: tagging system*
 - Show Agent program for managing resources
+- Other prompt ideas:
+	- Light mode
+	- Unit tests
+	- Keyboard shortcuts
