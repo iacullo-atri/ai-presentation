@@ -1,0 +1,42 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Frontend",
+            "type": "node",
+            "request": "launch",
+            "runtimeExecutable": "npm",
+            "runtimeArgs": [
+                "run",
+                "dev"
+            ],
+            "localRoot": "${workspaceFolder}/frontend",
+        },
+        {
+            "name": "Backend",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${workspaceFolder}/backend/manage.py",
+            "args": [
+                "runserver",
+            ],
+            "django": true,
+            "justMyCode": true,
+            "console": "internalConsole"
+        },
+    ],
+    "compounds": [
+        {
+            "name": "Fullstack",
+            "presentation": {
+                "hidden": false,
+                "group": "Full",
+                "order": 1
+            },
+            "configurations": [
+                "Backend",
+                "Frontend"
+            ]
+        }
+    ]
+}
