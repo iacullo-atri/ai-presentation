@@ -1,0 +1,1 @@
+Add an expandable search bar/button to the todo list. It should go somewhere above the "new item" form. This should filter the to-do list at the API level.
